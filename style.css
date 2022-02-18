@@ -22,17 +22,19 @@ body {
   min-height: 100vh;
 }
 
+ul {
+  margin: 0;
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
 img,
 picture {
   max-width: 100%;
   display: block;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -46,11 +48,30 @@ select {
   }
 }
 
-/* Base */
-div{}
-div button{}
-/* Layout */
+/* Variables */
+:root {
+  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  /* --size-outline: 3px; // Esto es para cambiar el outline del helper */
+}
 
+/* Base */
+body {
+  font-family: var(--font-sans);
+}
+/* Layout */
+.contenedor-banner {}
+.contenedor-banner h2{
+  font-size: 30px;
+  text-align: center;
+}
+.contenedor-banner p{}
+.contenedor-banner {}
 /* Componentes */
 
 /* Utilidades */
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
