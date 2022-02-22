@@ -1,3 +1,8 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 /* Reset */
 *,
 *::before,
@@ -50,8 +55,7 @@ picture {
 
 /* Variables */
 :root {
-  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-  /* --size-outline: 3px; // Esto es para cambiar el outline del helper */
+  font-family: 'Inter var', sans-serif;
 }
 
 /* Base */
@@ -59,15 +63,60 @@ body {
   font-family: var(--font-sans);
 }
 /* Layout */
-.contenedor-banner {}
-.contenedor-banner h2{
+h2{
   font-size: 30px;
   text-align: center;
 }
-.contenedor-banner p{}
-.contenedor-banner {}
-/* Componentes */
+.contenedor-banner {
+  background-color: indianred;
+}
+.contenedor-banner h2{
+  font-size: 50px;
+  text-align: center;
+}
+.contenedor-banner p{
+  font-size: 15px;
+  text-align: center;
+}
+.contenedor-banner img{
+  width: 150px;
+  height: auto;
+  margin: auto;
+}
+.contenedor{
 
+}
+.contenedor-fila {
+display: flex;
+}
+/* Componentes */
+body {
+display: flex;
+height: 100vh;
+}
+
+.overlay {
+width: 80%;
+border-radius: 30px;
+display: flex;
+margin: auto;
+background-color: #a7caff;
+}
+.overlay div {
+  margin: auto;
+    padding-block: 100px;
+}
+.overlay p {
+  text-align: center;
+
+
+
+}
+.overlay img {
+  object-fit: contain;
+  width: 100px;
+  margin: auto;
+}
 /* Utilidades */
 .flex {
   display: flex;
