@@ -1,15 +1,14 @@
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+/* Imports & supports */
+@font-face {
+  font-family: "Neue Machina";
+  src: url("https://res.cloudinary.com/drwz8ea7q/raw/upload/v1645818261/PPNeueMachina-Regular_yo69f2.woff2");
 }
-/* Reset */
+/* Reset & Base */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
-
 body,
 h1,
 h2,
@@ -19,29 +18,28 @@ h5,
 p,
 figure,
 picture {
-  margin: 0;
+  margin: 0
 }
-
 body {
   line-height: 1.5;
-  min-height: 100vh;
+  min-height: 100vh
 }
-
 ul {
   margin: 0;
   padding-inline: 0;
 }
-
 li {
-  list-style: none;
+  list-style: none
 }
-
+a {
+  text-decoration: none
+}
 img,
 picture {
-  max-width: 100%;
+  max-width: 60%;
   display: block;
+  margin-right: auto;
 }
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -49,73 +47,50 @@ picture {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behaviour: auto !important;
+    scroll-behavior: auto !important
   }
 }
-
 /* Variables */
 :root {
-  font-family: 'Inter var', sans-serif;
+  /* tipografia */
+  --f-family: "Neue Machina";
+  --f-size: 16px;
+  --f-weight: 400;
 }
-
-/* Base */
-body {
-  font-family: var(--font-sans);
-}
-/* Layout */
-h2{
-  font-size: 30px;
-  text-align: center;
-}
-.contenedor-banner {
-  background-color: indianred;
-}
-.contenedor-banner h2{
-  font-size: 50px;
-  text-align: center;
-}
-.contenedor-banner p{
-  font-size: 15px;
-  text-align: center;
-}
-.contenedor-banner img{
-  width: 150px;
-  height: auto;
-  margin: auto;
-}
-.contenedor{
-
-}
-.contenedor-fila {
-display: flex;
+/* Aplica estas variables a todos los elementos */
+* {
+  font-family: var(--f-family);
+  font-size: var(--f-size);
+  font-weight: var(--f-weight)
 }
 /* Componentes */
-body {
-display: flex;
-height: 100vh;
+body  {
+  background-color: #e4bed8
+}
+h1{
+  color: #085afa;
+  font-size: 60px;
+  line-height: 60px;
+}
+p{
+color: #085afa;
 }
 
-.overlay {
-width: 80%;
-border-radius: 30px;
-display: flex;
+.anio{
+font-size: 50px;
+color: greenyellow;
+}
+
+.ejemplo{
 margin: auto;
-background-color: #a7caff;
-}
-.overlay div {
-  margin: auto;
-    padding-block: 100px;
-}
-.overlay p {
-  text-align: center;
-
-
+max-width: max-content;
 
 }
-.overlay img {
-  object-fit: contain;
-  width: 100px;
-  margin: auto;
+.ejemplo div {
+padding-top: 60px;
+}
+.ejemplo div p{
+padding-top: 20px;
 }
 /* Utilidades */
 .flex {
