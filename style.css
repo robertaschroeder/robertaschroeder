@@ -1,14 +1,10 @@
-/* Imports & supports */
-@font-face {
-  font-family: "Neue Machina";
-  src: url("https://res.cloudinary.com/drwz8ea7q/raw/upload/v1645818261/PPNeueMachina-Regular_yo69f2.woff2");
-}
-/* Reset & Base */
+/* Reset */
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
+
 body,
 h1,
 h2,
@@ -18,28 +14,29 @@ h5,
 p,
 figure,
 picture {
-  margin: 0
+  margin: 0;
 }
+
 body {
   line-height: 1.5;
-  min-height: 100vh
+  min-height: 100vh;
 }
+
 ul {
   margin: 0;
   padding-inline: 0;
 }
+
 li {
-  list-style: none
+  list-style: none;
 }
-a {
-  text-decoration: none
-}
+
 img,
 picture {
-  max-width: 60%;
+  max-width: 100%;
   display: block;
-  margin-right: auto;
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -47,51 +44,96 @@ picture {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important
+    scroll-behaviour: auto !important;
   }
 }
+
 /* Variables */
 :root {
-  /* tipografia */
-  --f-family: "Neue Machina";
-  --f-size: 16px;
-  --f-weight: 400;
-}
-/* Aplica estas variables a todos los elementos */
-* {
-  font-family: var(--f-family);
-  font-size: var(--f-size);
-  font-weight: var(--f-weight)
-}
-/* Componentes */
-body  {
-  background-color: #e4bed8
-}
-h1{
-  color: #085afa;
-  font-size: 60px;
-  line-height: 60px;
-}
-p{
-color: #085afa;
+  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
 }
 
-.anio{
-font-size: 50px;
-color: greenyellow;
+/* Base */
+body {
+  font-family: var(--font-sans);
+}
+/* Layout */
+.menu {
+  height: 10vh;
+  background: rgb(71, 24, 158);
+  width: 100%;
 }
 
-.ejemplo{
-  display: flex;
-margin: auto;
-max-width: max-content;
-height: 100vh;
-align-items: center;
+.grid {
+  height: 90vh;
+  padding-block: 15px;
+  gap: 15px;
+  display: grid;
+  grid-template-columns: [uno] 2fr [dos] 2fr [tres] 2.5fr [cuatro] 1.5fr;
+  grid-template-rows: 1.5fr 1fr 1fr 3.5fr 2.5fr;
 
 }
-.ejemplo div {
-padding-top: 60px;
+
+.grid div {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ border: 3px solid rgb(71, 24, 158);
 }
-.ejemplo div p{
-padding-top: 20px;
+
+.grid div:nth-child(1) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/02_oqswh1.jpg");
+grid-column: 1/2;
+grid-row: 1/4;
+}
+.grid div:nth-child(2) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/03_fdyaqk.jpg");
+grid-column: 2/3;
+grid-row: 1/2;
+}
+.grid div:nth-child(3) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/05_bbvzw9.jpg");
+grid-column: 3/4;
+grid-row: 1/2;
+}
+.grid div:nth-child(4) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/07_e2mosf.jpg");
+grid-column: 4/5 ;
+grid-row: 1/3;
+}
+.grid div:nth-child(5) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/11_v5pwkc.jpg");
+grid-column: 2/4 ;
+grid-row: 2/4;
+}
+.grid div:nth-child(6) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/10_mzggpy.jpg");
+grid-column: 4/5 ;
+grid-row: 3/4;
+}
+.grid div:nth-child(7) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/12_kwfnof.jpg");
+grid-column: 1/3 ;
+grid-row: 4/5;
+}
+.grid div:nth-child(8) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/01_jte7dv.jpg");
+grid-column: 3/5 ;
+grid-row: 4/5;
+}
+.grid div:nth-child(9) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/04_mryv5s.jpg");
+grid-column: 1/2 ;
+grid-row: 5/6 ;
+}
+.grid div:nth-child(10) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/06_o6l71o.jpg");
+grid-column: 2/3 ;
+grid-row: 5/6;
+}
+.grid div:nth-child(11) {
+  background-image: url("https://res.cloudinary.com/pmichventura/image/upload/v1645148357/imagenes/08_wro2oj.jpg");
+grid-column:  3/5;
+grid-row: 5/6;
 }
